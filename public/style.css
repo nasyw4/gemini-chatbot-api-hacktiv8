@@ -1,0 +1,96 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #f0f2f5; /* Latar belakang seperti WhatsApp Web */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px; /* Jarak dari atas */
+}
+
+/* Style for the container to center the chat area */
+.chat-container {
+  width: 90%; /* Lebar relatif */
+  max-width: 450px; /* Lebar maksimum untuk tampilan seperti ponsel */
+  height: 70vh; /* Tinggi relatif terhadap viewport, bisa disesuaikan */
+  max-height: 600px; /* Tinggi maksimum */
+  margin: 20px auto;
+  border: 1px solid #d1d7db;
+  border-radius: 8px; /* Sudut yang lebih lembut */
+  display: flex;
+  flex-direction: column; /* Susun chatbox dan form secara vertikal */
+  background-color: #fff; /* Latar belakang putih untuk kontainer chat */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Bayangan yang lebih halus */
+}
+#chatbox {
+  flex-grow: 1; /* Mengisi ruang vertikal yang tersedia */
+  padding: 15px;
+  overflow-y: auto; /* Scroll jika pesan banyak */
+  background-color: #e5ddd5; /* Latar belakang area pesan seperti WhatsApp */
+  /* background-image: url('path-to-whatsapp-like-pattern.png'); /* Opsional: pola latar belakang */
+}
+.user-message {
+  display: block; /* Ensure margin: auto works */
+  background-color: #e0e0e0; /* Light gray background */
+  color: #333; /* Darker text for contrast */
+  text-align: right;
+  margin-bottom: 10px; /* More space between messages */
+  padding: 8px 12px; /* Padding inside the bubble */
+  border-radius: 12px; /* Sudut yang sedikit lebih tajam */
+  max-width: 80%; /* Limit bubble width relative to chatbox */
+  word-wrap: break-word; /* Break long words */
+  margin-left: auto; /* Push user message to the right */
+  text-align: left;
+  margin-bottom: 10px; /* More space between messages */
+  padding: 8px 12px; /* Padding inside the bubble */
+  border-radius: 12px; /* Sudut yang sedikit lebih tajam */
+  max-width: 80%; /* Limit bubble width relative to chatbox */
+  word-wrap: break-word; /* Break long words */
+  margin-right: auto; /* Push bot message to the left */
+  width: fit-content; /* Adjust width to content */
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: left; /* Align text inside the bubble to the left */
+}
+
+.bot-message {
+  display: block; /* Ensure margin: auto works */
+  background-color: #c8e6c9; /* Light green background */
+  color: #333; /* Darker text for contrast */
+  text-align: left;
+  /* text-align: left; <-- This was already correct, but let's keep it explicit below */
+
+  margin-bottom: 10px; /* More space between messages */
+  padding: 8px 12px; /* Padding inside the bubble */
+  border-radius: 12px; /* Sudut yang sedikit lebih tajam */
+  margin-right: auto; /* Push bot message to the left */
+  width: fit-content; /* Adjust width to content */
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: left; /* Align text inside the bubble to the left */
+}
+
+#chatForm {
+  display: flex; /* Susun input dan tombol secara horizontal */
+  padding: 10px;
+  background-color: #f0f0f0; /* Latar belakang untuk area input */
+  border-top: 1px solid #d1d7db;
+}
+
+#userInput {
+  flex-grow: 1; /* Input mengambil sisa ruang */
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Input yang membulat */
+  margin-right: 10px; /* Jarak antara input dan tombol */
+}
+button {
+  padding: 10px 15px;
+  background-color: #007bff; /* Warna tombol biru */
+  color: white;
+  border: none;
+  border-radius: 20px; /* Tombol yang membulat */
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+button:hover {
+  background-color: #0056b3;
+}
